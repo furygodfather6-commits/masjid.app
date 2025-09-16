@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="6dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Top Section: Member Info and Actions -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textViewName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Member Name" />
+
+                <TextView
+                    android:id="@+id/textViewPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    tools:text="Phone Number" />
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/buttonEdit"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_edit_modern"
+                app:tint="@color/blue_edit"
+                android:contentDescription="Edit Member" />
+
+            <ImageButton
+                android:id="@+id/buttonDelete"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_delete_modern"
+                app:tint="@color/red_pending"
+                android:contentDescription="Delete Member" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/colorBackground"/>
+
+        <!-- Bottom Section: Payment Details for the current month -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <LinearLayout style="@style/DashboardStatContainer">
+                <TextView style="@style/DashboardStatTitle" android:text="इस माह की फीस" />
+                <TextView android:id="@+id/textViewCurrentFee" style="@style/DashboardStatValue" tools:text="₹500" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DashboardStatContainer">
+                <TextView style="@style/DashboardStatTitle" android:text="जमा" />
+                <TextView android:id="@+id/textViewPaidAmount" style="@style/DashboardStatValue.Green" tools:text="₹500" />
+            </LinearLayout>
+
+            <LinearLayout style="@style/DashboardStatContainer">
+                <TextView style="@style/DashboardStatTitle" android:text="बकाया" />
+                <TextView android:id="@+id/textViewPendingAmount" style="@style/DashboardStatValue.Red" tools:text="₹0" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
