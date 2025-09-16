@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    tools:context=".YearlyGridActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/white"
+            app:titleTextColor="@color/white"
+            app:title="वार्षिक भुगतान ग्रिड" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="?attr/colorPrimaryVariant"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:text="नाम"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView style="@style/MonthHeader" android:text="जन"/>
+                <TextView style="@style/MonthHeader" android:text="फ़र"/>
+                <TextView style="@style/MonthHeader" android:text="मार्च"/>
+                <TextView style="@style/MonthHeader" android:text="अप्रै"/>
+                <TextView style="@style/MonthHeader" android:text="मई"/>
+                <TextView style="@style/MonthHeader" android:text="जून"/>
+                <TextView style="@style/MonthHeader" android:text="जुला"/>
+                <TextView style="@style/MonthHeader" android:text="अग"/>
+                <TextView style="@style/MonthHeader" android:text="सितं"/>
+                <TextView style="@style/MonthHeader" android:text="अक्टू"/>
+                <TextView style="@style/MonthHeader" android:text="नवं"/>
+                <TextView style="@style/MonthHeader" android:text="दिसं"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_fixed"
+            android:layout_width="120dp"
+            android:layout_height="match_parent" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_scrollable"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </HorizontalScrollView>
+
+    </LinearLayout>
+
+</LinearLayout>
