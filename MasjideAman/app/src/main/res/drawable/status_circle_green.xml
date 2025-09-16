@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <!-- Using the new color name for paid status -->
+    <solid android:color="@color/green_paid"/>
+    <size android:width="10dp" android:height="10dp"/>
+</shape>
+

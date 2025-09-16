@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    android:paddingTop="6dp"
+    android:paddingBottom="6dp"
+    android:background="?attr/selectableItemBackground">
+
+    <TextView
+        android:id="@+id/member_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:text="Member Name"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <LinearLayout
+        android:id="@+id/months_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:orientation="horizontal">
+
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_1" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_2" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_3" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_4" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_5" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_6" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_7" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_8" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_9" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_10" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_11" />
+        <TextView style="@style/CompactMonthCell" android:id="@+id/month_12" />
+    </LinearLayout>
+
+</LinearLayout>
