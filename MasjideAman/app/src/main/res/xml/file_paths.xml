@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<paths>
-    <!-- CSV/PDF share karne ke liye temporary files yahan save hongi -->
-    <cache-path name="shared_files" path="." />
-    <!-- PDF save karne ke liye Documents folder ka access -->
-    <external-files-path name="external_documents" path="Documents" />
-</paths>
-
