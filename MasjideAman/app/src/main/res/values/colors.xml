@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- New Professional Islamic Theme -->
+    <color name="colorPrimary">#006A4E</color> <!-- Deep Green -->
+    <color name="colorPrimaryVariant">#004B3A</color> <!-- Darker Green -->
+    <color name="colorSecondary">#D4AF37</color> <!-- Gold/Ochre -->
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorBackground">#F5F5F5</color> <!-- Light Cream/Gray -->
+    <color name="colorSurface">#FFFFFF</color>
+
+    <!-- Text and Status Colors -->
+    <color name="black">#212121</color>
+    <color name="white">#FFFFFF</color>
+    <color name="green_paid">#16A34A</color>
+    <color name="red_pending">#DC2626</color>
+    <color name="orange_partial">#EA580C</color>
+    <color name="blue_edit">#2563EB</color>
+
+    <!-- Light versions for grid background -->
+    <color name="light_green_bg">#D1FAE5</color>
+    <color name="light_red_bg">#FEE2E2</color>
+    <color name="light_orange_bg">#FFEDD5</color>
+    <color name="light_gray_bg">#E0E0E0</color>
+    <color name="card_background">#F0FDF4</color>
+</resources>
+
