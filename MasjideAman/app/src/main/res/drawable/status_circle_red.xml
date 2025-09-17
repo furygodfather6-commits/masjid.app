@@ -1,7 +1,0 @@
-<shape xmlns:android="http://schemas.android.com/apk/res/android"
-    android:shape="oval">
-    <!-- Using the new color name for pending status -->
-    <solid android:color="@color/red_pending"/>
-    <size android:width="10dp" android:height="10dp"/>
-</shape>
-
