@@ -308,6 +308,18 @@ class HomeFragment : Fragment() {
             startActivity(Intent(requireActivity(), QiblaActivity::class.java))
         }
 
+        binding.tasbihCounterCard.setOnClickListener {
+            startActivity(Intent(requireActivity(), TasbihCounterActivity::class.java))
+        }
+
+        binding.hijriCalendarCard.setOnClickListener {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+                startActivity(Intent(requireActivity(), HijriCalendarActivity::class.java))
+            } else {
+                Toast.makeText(requireContext(), "Hijri Calendar requires Android 7.0 or higher.", Toast.LENGTH_SHORT).show()
+            }
+        }
+
         binding.btnAlerts.setOnClickListener {
             showAlarmsDialog()
         }
