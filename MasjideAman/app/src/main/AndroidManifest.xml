@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
@@ -39,8 +40,10 @@
         <activity android:name=".AnyaChandaActivity" />
         <activity android:name=".MemberDetailActivity" />
         <activity android:name=".QiblaActivity" />
+        <activity android:name=".HijriCalendarActivity" />
+        <activity android:name=".TasbihCounterActivity" />
 
-        <receiver android:name=".PrayerAlarmReceiver" android:enabled="true" />
+        <receiver android:name=".PrayerAlarmReceiver" android:enabled="true" android:exported="true" />
 
         <service
             android:name=".AzanPlaybackService"
