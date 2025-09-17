@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".FundFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="12dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_monthly_chanda"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="मासिक चंदा"
+                android:layout_marginEnd="6dp"
+                app:icon="@drawable/ic_monthly_chanda" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_anya_amdani"
+                style="@style/Widget.MaterialComponents.Button.Icon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="आमदनी-खर्च"
+                android:layout_marginStart="6dp"
+                android:backgroundTint="@color/colorSecondary"
+                app:icon="@drawable/ic_anya_amdani" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Namaz Timetable"
+                    android:padding="12dp"
+                    android:background="?attr/colorPrimaryVariant"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <include layout="@layout/item_namaz_row" android:id="@+id/row_fajr"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#eee"/>
+                    <include layout="@layout/item_namaz_row" android:id="@+id/row_dhuhr"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#eee"/>
+                    <include layout="@layout/item_namaz_row" android:id="@+id/row_asr"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#eee"/>
+                    <include layout="@layout/item_namaz_row" android:id="@+id/row_maghrib"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#eee"/>
+                    <include layout="@layout/item_namaz_row" android:id="@+id/row_isha"/>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="#eee"/>
+                    <include layout="@layout/item_namaz_row" android:id="@+id/row_jumma"/>
+                </LinearLayout>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
