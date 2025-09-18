@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HijriCalendarActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/mosque_background"
+        android:scaleType="centerCrop"
+        android:alpha="0.8"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#33FFFFFF">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:title=" "
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:navigationIconTint="@color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/hijri_month_year_english"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                tools:text="Sha'ban 1445"/>
+            <TextView
+                android:id="@+id/hijri_month_year_arabic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:layout_gravity="end"
+                android:textColor="@color/black"
+                tools:text="شعبان - ١٤٤٥"/>
+
+            <TextView
+                android:id="@+id/gregorian_months"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                tools:text="(February - March 2024)"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="8dp"
+            android:paddingBottom="8dp">
+            <TextView style="@style/DayOfWeek" android:text="MON"/>
+            <TextView style="@style/DayOfWeek" android:text="TUE"/>
+            <TextView style="@style/DayOfWeek" android:text="WED"/>
+            <TextView style="@style/DayOfWeek" android:text="THU"/>
+            <TextView style="@style/DayOfWeek" android:text="FRI"/>
+            <TextView style="@style/DayOfWeek" android:text="SAT"/>
+            <TextView style="@style/DayOfWeek" android:text="SUN"/>
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/calendarRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@drawable/glassmorphism_background"
+            android:layout_margin="8dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Important Dates &amp; Info"
+                android:textStyle="bold"
+                android:textColor="@color/black"/>
+            <TextView
+                android:id="@+id/important_dates_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="12 February: First Day of Month\n24 Feb, 25 Feb, 26 Feb: Ayyam al-Beedh\n11 March: Next moon sighting\nNote: The Islamic day begins at sunset (Maghrib)."/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <ImageButton
+                android:id="@+id/previousMonthButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="?attr/colorPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Previous Month" />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Hijri Date India"
+                android:gravity="center"
+                android:textStyle="bold"/>
+            <ImageButton
+                android:id="@+id/nextMonthButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_arrow_back"
+                android:rotation="180"
+                app:tint="?attr/colorPrimary"
+                android:background="?android:attr/selectableItemBackground"
+                android:contentDescription="Next Month" />
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
